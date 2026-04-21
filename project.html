@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="project.css">
+    
+
+    <title>KITCHEN INTERIER</title>
+</head>
+    <body>
+        <header>
+<div class="navbar">
+    <div class="nav-logo1 border">
+        <div class="logo1"></div>
+    </div>
+    <div class="nav-adress border">
+
+        <p class="add-first">Deliver to</p>
+
+        <div class="add-icon">
+            <i class="fa-solid fa-location-dot"></i>
+
+            <p class="add-sec">INDIA</p>
+
+        </div>
+    </div>
+           
+         
+                <select name="city" id="city" class="option-select"> 
+                <option value="Fernicher"> Fernicher </option>
+                <option value="Laminate">  Laminate </option>
+                <option value="Strecture"> Strecture </option>
+                <option value="Moduler">   Moduler </option>
+                <option value="Fremwork">  Fremwork </option>
+                </select>  
+           
+
+
+        <div class="nav-search">
+        
+        <input id="searchInput" placeholder="Search INTERIOR"  class="search-input">
+        <div class="search-icon" onclick="searchInterior()">
+             <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+
+    </div>
+        <div class="nav-singin border" onclick="toggleAcccount()" >
+         <p><span>Hello, sign in</span></p>
+         <p class="nav-sec">Account</p>
+        </div>
+        <div id="accountMenu" class="account-menu">
+            <button onclick="openSignin()">Sign In</button>
+            <button onclick="openRegister()">Register</button>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="nsv-return border">
+        <p><span>Returns</span></p>
+        <p class="nav-sec">& Orders</p>
+    </div>
+    <div class="nav-card border" >
+     <i class="fa-solid fa-cart-shopping"></i>
+     Cart
+    </div>
+    
+</div>
+<div class="panel">
+    <div class="panel-all">
+     <i class="fa-solid fa-bars"></i>
+     <button class="loi"> ALL </button>
+    </div>    
+        <div class="panel-ops">
+            <p>Today's Deals</p>
+            <p>Coustomer Service</p>
+            <p>Registry</p>
+            <p>Gift Card</p>
+            <p>Sells</p>
+        </div>
+            <div class="panel-deals">
+                Shop deals in INTERIOR
+            </div>
+
+    </header>
+    <div class="photo-section">
+        
+    </div>
+    <div class="photo-massege">
+        <p>You are on MK.com.You can visit and experience INTERIER MODULING.<a>
+           </p>
+    </div>
+
+    <div class="image-sec">
+        <div id="hall" class="image-1 b">
+           <button onclick="openHall()"><h>HALL</h></button> 
+            <div class="img-1" style="background-image: url('IMAGE/gettyimages-1386951933-612x612.jpg');"></div>
+        </div>
+        <div id="kitchen" class="image-2 b" >  
+            <button onclick="openKitchen()"><h>KITCHEN</h>  </button>
+        <div class="img-2" style="background-image: url('IMAGE/elegant.jpg');"></div>
+        </div>
+        
+        <div id="bedroom" class="image-3 b">
+           <button onclick="openBedroom()"><h>BEDROOM</h></button>
+        <div class="img-3" style="background-image: url('IMAGE/dark-bedroom-interior-with-black-walls-wooden-floor-comfortable-king-size-bed-with-blue-linen-ai-generated-free-photo.jpg');"></div>
+        </div>
+    </div>
+    <div class="photo-massege">
+        <P>TV UNIT AND TEMPAL MODULES.</P>
+    </div>
+    <div class="image-thrd">
+        <div id="tv unit" class="image-1 h">
+           <button onclick="openTvunit()"><h>TV UNIT</h></button>
+            <div class="imge-1" style="background-image: url('IMAGE/51ko759o55L.jpg');"></div>
+        </div>
+
+        <div id="dev ghar" class="image-2 h" >  
+<!-- calculate interior buget -->
+ <!-- calculate interior buget -->
+            <div class="hall_b">
+           <button class="my-bytton" onclick="openDevghar()" ><h>DEV GHAR</h>  </button>
+            </div>
+<!-- calculate interior buget -->
+ <!-- calculate interior buget -->
+
+
+        <div class="imge-2" style="background-image: url('IMAGE/hhhhhhhhhhhh.jpg');"></div>
+        </div>    
+    </div>
+   <!-- calculate interior buget -->
+   
+    <h1><b><u>CACULATE INTERIOR BUGET</u></b></h1><br>
+    <b> # KITCHEN #</b>
+    
+    <br><br>
+    <input type="number" id="WIDTH"  placeholder="width (ft)">
+    <input type="number" id="breath" placeholder="breath (ft)">
+    =
+    <input type="number" id="RATE"   placeholder="RATE(per-sq-ft)" value="3500">
+    <button onclick="calculate()">Calculate</button>
+    <br><br>
+    <h1 id="result">$ 0</h1>
+             <i class="fa-solid fa-magnifying-glass"></i><br><br>
+
+ <!-- calculate  hall interior buget -->
+ <b> # HALL #</b>
+             <br><br>
+             <input type="number" id="HWIDTH"  placeholder="width (ft)">
+             <input type="number" id="Hbreath" placeholder="breath (ft)">
+             =
+             <input type="number" id="HRATE"   placeholder="RATE(per-sq-ft)" value="3500">
+
+           
+                <button  onclick="calculate_h()">Calculate</button>
+           
+             <br><br>
+             <h1 id="Hresult">$ 0</h1>
+                      <i class="fa-solid fa-magnifying-glass"></i><br><br>
+
+ <!-- calculate bed interior buget -->
+ <b> # BED #</b>
+                      <br><br>
+                      <input type="number" id="BWIDTH"  placeholder="width (ft)">
+                      <input type="number" id="Bbreath" placeholder="breath (ft)">
+                      =
+                      <input type="number" id="BRATE"   placeholder="RATE(per-sq-ft)" value="3500">
+                      <button onclick="calculate_b()">Calculate</button>
+                      <br><br>
+                      <h1 id="Bresult">$ 0</h1>
+                               <i class="fa-solid fa-magnifying-glass"></i>
+
+
+ <div class=""></div>       
+
+
+
+
+
+    <footer>
+        <div class="foot-p1" onclick="UP" placeholder="BACK TO TOP"> 
+            <A>BACK TO TOP</A>
+        </div>
+                <div class="foot-p2">
+                    <ul>
+                        <p>GET TO KNOW</p>
+                        <A>TO ONE</A>
+                        <A>Blog</A>
+                        <A>About MK</A> 
+                        <A>Investor Relations</A> 
+                        <A>INTERIER plans</A>
+                    </ul>
+                    <ul>
+                        <p>GET TO KNOW</p>
+                        <A>CONTACT</A>
+                        <A>LINK</A>
+                        <A>COMPANY</A> 
+                        <A>Investor Relations</A> 
+                        <A>INTERIER plans</A>
+                                          
+                    </ul>
+                    <ul>
+                        <p>INFORMATION</p>
+                        <A>CAREERS</A>
+                        <A>OPERTUNITY</A>
+                        <A>OVERALL</A> 
+                        <A>COUSTOMER Relations</A> 
+                        <A>NEXT plans</A>            
+                    </ul>
+                    
+                </div>
+                <div class="foot-p3">
+                    <div class="logo">
+
+                    </div>
+                </div>
+<BR><BR>
+                <div class="foot-p4">
+                    <br>
+                    <div class="page " >
+                        <A>CONDITION OF USE</A>
+                        <A>PRIVASY NOTICE</A>
+                        <A>YOUR ADS PRIVASY CHOICES</A>
+                    </div>
+                    <div class="copyright">
+                        @ 1234-4332, MK.com, PH-123456789;
+                    </div>
+                </div>     
+    </footer>  
+    <script src="index.js">
+        
+    </script>    
+    </body>
+</html>                 

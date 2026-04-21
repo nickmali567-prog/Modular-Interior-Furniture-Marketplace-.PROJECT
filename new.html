@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="shell">
+  <h2>Welcome</h2>
+  <h3 id="userName"></h3>
+
+  <p><b>Date:</b> <span id="date"></span></p>
+
+  <h4>Purchased Items:</h4>
+  <ul>
+    <li>Kitchen - 45 SqFt - 120000</li>
+    <li>Shlfs - 30 SqFt - 50000</li>
+  </ul>
+
+  <p><b>Total Cost:</b> 170000</p>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+document.getElementById("userName").innerText =
+    localStorage.getItem("username");
+
+document.getElementById("date").innerText =
+    new Date().toLocaleDateString();
+
+function logout() {
+    localStorage.clear();
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
